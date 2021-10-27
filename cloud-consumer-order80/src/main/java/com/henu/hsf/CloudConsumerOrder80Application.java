@@ -2,6 +2,7 @@ package com.henu.hsf;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /**
  * @author hsf
@@ -11,6 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @createTime 2021年10月27日 15:46:00
  */
 @SpringBootApplication
+@EnableEurekaClient
 public class CloudConsumerOrder80Application {
 
     public static void main(String[] args) {

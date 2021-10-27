@@ -62,6 +62,7 @@ public class PaymentController {
 
         return new CommonResult<>(200, "select success， serverPort：" + serverPort, payment);
     }
+
     @GetMapping("discovery")
     public Object discovery() {
         List<String> services = discoveryClient.getServices();

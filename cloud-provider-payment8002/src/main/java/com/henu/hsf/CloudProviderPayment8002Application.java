@@ -8,16 +8,18 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 /**
  * @author hsf
  * @version 1.0.0
- * @ClassName CloudProviderPayment8001Application.java
+ * @ClassName CloudProviderPayment8002Application.java
  * @Description TODO
- * @createTime 2021年10月27日 11:43:00
+ * @createTime 2021年10月27日 17:08:00
  */
 @SpringBootApplication
 @EnableEurekaClient
 @EnableDiscoveryClient
-public class CloudProviderPayment8001Application {
+public class CloudProviderPayment8002Application {
+
     public static void main(String[] args) {
-        SpringApplication.run(CloudProviderPayment8001Application.class, args);
+        SpringApplication.run(CloudProviderPayment8002Application.class, args);
         System.out.println("启动成功");
     }
+
 }
