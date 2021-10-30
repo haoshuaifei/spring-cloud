@@ -59,6 +59,8 @@ public class PaymentController {
     public CommonResult<List<Payment>> queryAllByLimit(@RequestParam(defaultValue = "0") int offset,
                                                        @RequestParam(defaultValue = "10") int limit) {
         List<Payment> payment = this.paymentService.queryAllByLimit(offset, limit);
+        System.out.println("111");
+        int i = 10/2;
 
         return new CommonResult<>(200, "select success， serverPort：" + serverPort, payment);
     }
