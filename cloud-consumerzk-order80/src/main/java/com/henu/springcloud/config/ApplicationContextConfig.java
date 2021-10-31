@@ -1,16 +1,10 @@
-package com.henu.hsf.config;
+package com.henu.springcloud.config;
 
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
 
-/**
- * @author hsf
- * @version 1.0.0
- * @ClassName ApplicationContextConfig.java
- * @Description TODO
- * @createTime 2021年10月27日 15:58:00
- */
 @Configuration
 public class ApplicationContextConfig {
 
@@ -18,7 +12,7 @@ public class ApplicationContextConfig {
     // 需要在配置文件配置之后，代码中才可以依赖注入
     // 当前文件就是spring的配置文件
     @Bean
-    //@LoadBalanced //让这个RestTemplate在请求时拥有客户端负载均衡的能力  //将此注解注释掉，使用自己的轮询算法不使用默认的
+    @LoadBalanced //让这个RestTemplate在请求时拥有客户端负载均衡的能力
     public RestTemplate getRestTemplate() {
         return new RestTemplate();
     }
